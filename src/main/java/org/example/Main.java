@@ -37,8 +37,13 @@ public class Main {
 
         heroes.forEach(n -> System.out.println(n.name + " " + n.getInfo()));
 
+        // Созаем объект spell и вызываем его рандомным числом из enum SpellBook:
+        SpellBook spell = SpellBook.values()[new Random().nextInt(Names.values().length)];
+
     }
+    // создаем метод для получения имен из enum (находится в том-же пакете вместе с Main)
+    // поэтому отдельно его вызывать нет необходимости:
     private static String getName() {
-       return Names.values()[new Random().nextInt(Names.values().length)].toString();
+       return Names.values()[new Random().nextInt(Names.values().length)].toString();   // рандомно присваиваем имена объектам из массива имен в enum
     }
 }

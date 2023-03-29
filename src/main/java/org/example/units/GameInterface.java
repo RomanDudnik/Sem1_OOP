@@ -9,6 +9,7 @@
 package org.example.units;
 
 public interface GameInterface {
-    void step();            // эти методы абстрактные по умолчанию, т.к. они в public interface
-    String getInfo();
+    // эти методы абстрактные по умолчанию, т.к. они в public interface:
+    void step();         // метод передвижения для всех объектов всех классов
+    String getInfo();      // метод инфы для всех объектов всех классов
 }

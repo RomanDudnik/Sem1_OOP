@@ -12,6 +12,6 @@ public class Spearman extends BaseHero {
     // реализуем метод интерфеса:
     @Override
     public String getInfo() {
-        return "Я копейщик";
+        return ":Я - копейщик";
     }
 }

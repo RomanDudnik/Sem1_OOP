@@ -12,6 +12,6 @@ public class Thief extends BaseHero {
     // реализуем метод интерфеса:
     @Override
     public String getInfo() {
-        return "Я вор";
+        return ": Я - вор";
     }
 }

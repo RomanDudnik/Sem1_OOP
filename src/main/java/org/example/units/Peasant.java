@@ -12,6 +12,6 @@ public class Peasant extends BaseHero {
     // реализуем метод интерфеса:
     @Override
     public String getInfo() {
-        return "Я крестьянин";
+        return ": Я - крестьянин";
     }
 }

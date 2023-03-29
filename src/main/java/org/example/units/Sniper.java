@@ -12,7 +12,7 @@ public class Sniper extends Shooter {
     // реализуем метод интерфеса:
     @Override
     public String getInfo() {
-        return "Я снайпер";
+        return ":Я - снайпер";
     }
 }
 

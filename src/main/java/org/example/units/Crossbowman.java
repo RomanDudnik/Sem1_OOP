@@ -11,6 +11,6 @@ public class Crossbowman extends Shooter {
     // реализуем метод интерфеса:
     @Override
     public String getInfo() {
-        return "Я арбалетчик";
+        return ": Я - арбалетчик";
     }
 }

@@ -3,18 +3,16 @@
  */
 package org.example.units;
 
-public class Mage extends BaseHero {
-    protected int mana;
-//    protected ArrayList<Spells> spells_book;
-    public Mage(String name) {
-        super(100, name, 1, 6, 50,  new int[]{6, 12}, "Маг");
-        mana = 100;
+public abstract class Mage extends BaseHero {
 
+    protected int mana;
+
+    public Mage(float hp, String name, int x, int y, int armor, int[] damage, int mana, String class_name) {
+        super(hp, name, x, y, armor, damage, class_name);
+        this.mana = mana;
     }
+
     // реализуем метод интерфеса:
-    @Override
-    public String getInfo() {
-        return "Я маг";
-    }
+
 
 }

@@ -1,6 +1,3 @@
- /**
- * Интерфейс пользователя
- */
 package org.example;
 import org.example.units.*;
 import java.util.ArrayList;
@@ -19,7 +16,7 @@ public class Main {
                     heroes.add(new Crossbowman(getName()));
                     break;
                 case 2:
-                    heroes.add(new Mage(getName()));
+                    heroes.add(new Wizard(getName()));
                     break;
                 case 3:
                     heroes.add(new Monk(getName()));

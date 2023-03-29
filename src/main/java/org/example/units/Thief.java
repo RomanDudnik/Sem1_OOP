@@ -1,12 +1,16 @@
 /**
  * Вор (тихий воин)
  */
-package units;
+package org.example.units;
 
 public class Thief extends BaseHero {
     int stealthMode;
     public Thief(String name) {
         super(100, name, 1, 6, 50, new int[]{8, 15}, "Вор");
         stealthMode = 10;
+    }
+    @Override
+    public String getInfo() {
+        return "Я вор";
     }
 }

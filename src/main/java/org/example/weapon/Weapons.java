@@ -1,4 +1,4 @@
-package weapon;
+package org.example.weapon;
 
 public class Weapons {
     protected String name;

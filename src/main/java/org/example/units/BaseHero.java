@@ -4,7 +4,6 @@
  * поля protected видны/можно вызвать только внутри пакета (*units)
  */
 package org.example.units;
-
 import org.example.Names;
 import org.example.units.GameInterface;
 import org.example.weapon.Weapons;
@@ -27,7 +26,7 @@ public abstract class BaseHero implements GameInterface {
     public  String toString() {
         return name + " " + hp + " " + armor + " " + class_name;
     }
-    public BaseHero(float hp, String name, int x, int y, int armor, int[] damage, String class_name) {
+    public BaseHero(float hp, int x, int y, int armor, int[] damage, String class_name) {
         this.name = getName();
         this.hp = hp;
         this.maxHp = hp;    //?

@@ -1,3 +1,6 @@
+/**
+ * Маг (волшебник - лечит)
+ */
 package org.example.units;
 
 public class Wizard extends Mage {

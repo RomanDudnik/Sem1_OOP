@@ -1,3 +1,6 @@
+/**
+ * enum для подбора имени героя
+ */
 package org.example;
 
 public enum Names {

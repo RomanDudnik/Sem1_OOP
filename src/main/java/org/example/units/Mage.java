@@ -11,6 +11,7 @@ public class Mage extends BaseHero {
         mana = 100;
 
     }
+    // реализуем метод интерфеса:
     @Override
     public String getInfo() {
         return "Я маг";

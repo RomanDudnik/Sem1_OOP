@@ -9,6 +9,7 @@ public class Peasant extends BaseHero {
         super(200, name, 1, 6, 20, new int[]{3, 5}, "Крестьянин");
         maxLoad = 50;
     }
+    // реализуем метод интерфеса:
     @Override
     public String getInfo() {
         return "Я крестьянин";

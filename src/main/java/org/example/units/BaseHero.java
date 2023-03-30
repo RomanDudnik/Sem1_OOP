@@ -12,7 +12,7 @@ import java.util.Random;
 
 public abstract class BaseHero implements GameInterface {
 // implements GI обозначаем реализацию интерфеса в этом родительском классе
-//    private int id;
+
     public String name;
     public String class_name;
 

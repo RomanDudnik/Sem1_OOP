@@ -6,8 +6,28 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 //        BaseHero hero = new BaseHero();     // конструктор для героя
+        int teamMemberNum = 10;
+        System.out.println("\nКоманда 1:");
+        ArrayList<BaseHero> team1 = teams(teamMemberNum);
+        team1.forEach(n -> System.out.println(n.name + " " + n.getInfo()));
+
+        System.out.println("\nКоманда 2:");
+        ArrayList<BaseHero> team2 = teams(teamMemberNum);
+        team2.forEach(n -> System.out.println(n.name + " " + n.getInfo()));
+
+        // Созаем объект spell и вызываем его рандомным числом из enum SpellBook:
+//        SpellBook spell = SpellBook.values()[new Random().nextInt(Names.values().length)];
+
+    }
+    // создаем метод для получения имен из enum (находится в том-же пакете вместе с Main)
+    // поэтому отдельно его вызывать нет необходимости:
+    private static String getName() {
+       return Names.values()[new Random().nextInt(Names.values().length)].toString();   // рандомно присваиваем имена объектам из массива имен в enum
+    }
+    // метод для рандомного подбора команды
+    private static ArrayList<BaseHero> teams(int num) {
         ArrayList<BaseHero> heroes = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < num; i++) {
             switch (new Random().nextInt(7)) {
                 case 0:
                     heroes.add(new Sniper(getName()));
@@ -31,16 +51,6 @@ public class Main {
                     heroes.add(new Peasant(getName()));
             }
         }
-
-        heroes.forEach(n -> System.out.println(n.name + " " + n.getInfo()));
-
-        // Созаем объект spell и вызываем его рандомным числом из enum SpellBook:
-        SpellBook spell = SpellBook.values()[new Random().nextInt(Names.values().length)];
-
-    }
-    // создаем метод для получения имен из enum (находится в том-же пакете вместе с Main)
-    // поэтому отдельно его вызывать нет необходимости:
-    private static String getName() {
-       return Names.values()[new Random().nextInt(Names.values().length)].toString();   // рандомно присваиваем имена объектам из массива имен в enum
+        return heroes;
     }
 }

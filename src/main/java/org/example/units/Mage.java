@@ -11,8 +11,7 @@ public abstract class Mage extends BaseHero {
         super(hp, x, y, armor, damage, class_name);
         this.mana = mana;
     }
-
-    // реализуем метод интерфеса:
-
-
+    public void health(){
+        System.out.println("Health!");
+    }
 }

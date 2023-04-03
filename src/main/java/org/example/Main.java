@@ -6,14 +6,22 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 //        BaseHero hero = new BaseHero();     // конструктор для героя
-        int teamMemberNum = 10;
-        System.out.println("\nКоманда 1:");
-        ArrayList<BaseHero> team1 = team1(teamMemberNum);
-        team1.forEach(n -> System.out.println(n.name + " " + n.getInfo()));
 
-        System.out.println("\nКоманда 2:");
+        int teamMemberNum = 10;
+        System.out.println("\nКоманда 'Light':\n");
+        ArrayList<BaseHero> team1 = team1(teamMemberNum);
+        team1.forEach(n -> System.out.println(n.toString() + "\nПозиция: " + n.getPosition() + "\n"));
+
+        System.out.println("\nКоманда 'Chaos':\n");
         ArrayList<BaseHero> team2 = team2(teamMemberNum);
-        team2.forEach(n -> System.out.println(n.name + " " + n.getInfo()));
+        team2.forEach(n -> System.out.println(n.toString() + "\nПозиция:  " + n.getPosition() + "\n"));
+
+        System.out.println("Ходы\n" + "_".repeat(40));
+
+        team1.forEach(n -> n.step(team2));
+
+        team2.forEach(n -> n.step(team1));
+
 
         // Созаем объект spell и вызываем его рандомным числом из enum SpellBook:
 //        SpellBook spell = SpellBook.values()[new Random().nextInt(Names.values().length)];
@@ -30,16 +38,16 @@ public class Main {
         for (int i = 0; i < num; i++) {
             switch (new Random().nextInt(4)) {
                 case 0:
-                    heroes.add(new Crossbowman(getName()));
+                    heroes.add(new Crossbowman(getName(), true));
                     break;
                 case 1:
-                    heroes.add(new Monk(getName()));
+                    heroes.add(new Monk(getName(), true));
                     break;
                 case 2:
-                    heroes.add(new Spearman(getName()));
+                    heroes.add(new Spearman(getName(), true));
                     break;
                 default:
-                    heroes.add(new Peasant(getName()));
+                    heroes.add(new Peasant(getName(), true));
             }
         }
         return heroes;
@@ -49,16 +57,16 @@ public class Main {
         for (int i = 0; i < num; i++) {
             switch (new Random().nextInt(4)) {
                 case 0:
-                    heroes.add(new Sniper(getName()));
+                    heroes.add(new Sniper(getName(), false));
                     break;
                 case 1:
-                    heroes.add(new Wizard(getName()));
+                    heroes.add(new Wizard(getName(), false));
                     break;
                 case 3:
-                    heroes.add(new Thief(getName()));
+                    heroes.add(new Thief(getName(), false));
                     break;
                 default:
-                    heroes.add(new Peasant(getName()));
+                    heroes.add(new Peasant(getName(), false));
             }
         }
         return heroes;

@@ -7,8 +7,10 @@
  */
 package org.example.units;
 
+import java.util.ArrayList;
+
 public interface GameInterface {
     // эти методы абстрактные по умолчанию, т.к. они в public interface:
-    void step();         // метод передвижения для всех объектов всех классов
+    void step(ArrayList<BaseHero> enemyTeam);         // метод передвижения для всех объектов всех классов
     String getInfo();      // метод инфы для всех объектов всех классов
 }

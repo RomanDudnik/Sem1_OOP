@@ -8,15 +8,15 @@ public class Main {
 //        BaseHero hero = new BaseHero();     // конструктор для героя
 
         int teamMemberNum = 10;
-        System.out.println("\nКоманда 'Light':\n");
+        System.out.println("\n<<<<<Команда 'Light'>>>>>\n");
         ArrayList<BaseHero> team1 = team1(teamMemberNum);
         team1.forEach(n -> System.out.println(n.toString() + "\nПозиция: " + n.getPosition() + "\n"));
 
-        System.out.println("\nКоманда 'Chaos':\n");
+        System.out.println("\n<<<<<Команда 'Chaos'>>>>>>\n");
         ArrayList<BaseHero> team2 = team2(teamMemberNum);
         team2.forEach(n -> System.out.println(n.toString() + "\nПозиция:  " + n.getPosition() + "\n"));
 
-        System.out.println("Ходы\n" + "_".repeat(40));
+        System.out.println("<<<<<Action>>>>>\n");
 
         team1.forEach(n -> n.step(team2));
 

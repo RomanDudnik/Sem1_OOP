@@ -33,9 +33,9 @@ public abstract class Shooter extends BaseHero {
     // метод выстрела/нанесение урона:
     // урон выпадает рандомом в дельте min -max дамга героя данного класса(или дочернего)
     public void shoot(BaseHero enemy){
-        System.out.println("Shoot!");
+        System.out.println("---Shoot!-->");
         int dmg = new Random().nextInt(damage[0],damage[1]);
         enemy.getDamage(dmg);
-        System.out.println(enemy.getInfo() + " получил(а) урон: " + dmg);
+        System.out.println(enemy.getInfo() + " получил(а) урон: " + dmg + "\n");
     }
 }
